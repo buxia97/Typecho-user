@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* typecho user V1.0 */
+/* 不暇 QQ1378283361 */
+/* www.ruletree.club */
+::selection{background:#c51f1f;
+color:#fff;}
+::-moz-selection{background:#c51f1f;
+color:#fff;}
+a{transition: 0.5s all;
+-webkit-transition: 0.5s all;
+-moz-transition: 0.5s all;
+-o-transition: 0.5s all;
+-ms-transition: 0.5s all;
+color:#1c9fa0;}
+#typecho-nav-list{position:fixed;
+z-index:999;
+left:0;
+background:#292b2d;
+top:0;
+width:250px;
+height:100%;
+-webkit-box-shadow:0 1px 5px rgba(0,0,0,.2);
+box-shadow:0 1px 5px rgba(0,0,0,.2);}
+.container{width:100%;
+padding:0px 30px;}
+.typecho-head-nav .operate{position:fixed;
+width: calc(100% - 265px);
+padding-right:15px;
+right:0px;
+height:50px;
+top:0px;
+z-index:1000;
+background: #1c9fa0;
+text-align:right;
+-webkit-box-shadow:0 1px 5px rgba(0,0,0,.2);
+box-shadow:0 1px 5px rgba(0,0,0,.2);}
+.typecho-head-nav .operate a{border:none;
+color:#fff;
+margin-top:7px;}
+.typecho-page-title h2 a{background:#1c9fa0;
+color:#fff;}
+.typecho-head-nav .operate a:hover{background:#136263;}
+.main{width: calc(100% - 250px);
+position:absolute;
+right:0;
+top:0px;
+padding-top:60px;
+padding-bottom:50px;}
+.typecho-page-title{height:60px;}
+.typecho-page-main{padding:15px 20px;
+background:#fff;
+-webkit-box-shadow:0 1px 5px rgba(0,0,0,.2);
+box-shadow:0 1px 5px rgba(0,0,0,.2);}
+.typecho-foot{display:none;}
+.row [class*="col-"]{padding:0px 20px;}
+.user-info{color:#fff;
+width:100%;
+padding-top:60px;
+text-align:center;
+padding-bottom:10px;
+border-bottom:solid 1px #191919;}
+.user-info img{border-radius:50%;
+transition: 0.5s all;
+width:90px;
+-webkit-transition: 0.5s all;
+-moz-transition: 0.5s all;
+-o-transition: 0.5s all;
+-ms-transition: 0.5s all;}
+.user-info img:hover{transform:rotate(360deg);}
+#typecho-nav-list ul:first-child{border:none;}
+.user-nav{padding-top:30px;}
+.user-nav li{line-height:40px;
+display:block;
+width:90%;
+margin:0 auto;
+height:40px;
+font-size:15px;
+margin-top:5px;}
+.user-nav li a{height:40px;
+width:100%;
+display:block;
+text-indent:2em;}
+.user-nav li a i{margin-right:5px;}
+.user-nav li a:hover{background:#1c9fa0;
+text-indent:2.2em;}
+.copy-links{width:85%;
+margin:20px auto 10px auto;}
+.copy-links p{color:#fff;}
+.links-mian{width:100%;
+padding:5px;
+overflow:hidden;
+zoom:1;
+height:auto;
+margin:0px;}
+.links-mian a{margin:5px;
+padding:6px 12px;
+display:inline-block; 
+width:auto;
+max-width:100%;
+border-radius:5px;
+color:#1c9fa0;
+border:#1c9fa0 solid 1px;
+white-space:nowrap;}
+.typecho-head-nav .operate a{padding:0px 12px;}
+#tonav{float:left;
+margin-left:15px;
+font-size:16px;}
+.typecho-page-main .col-tb-4{width:50%;}
+#wmd-preview{background:#f3f3f3;}
+#start-link{padding: 0 0 20px;}
+.primary{background-color:#1c9fa0;}
+.primary:hover{background-color:#177d7d;}
+.typecho-login{background:#fff;
+-webkit-box-shadow:0 1px 5px rgba(0,0,0,.2);
+box-shadow:0 1px 5px rgba(0,0,0,.2);
+opacity:0.95;}
+.typecho-login-wrap{width:100%;
+display:block;
+position:absolute;
+top:25%;
+height:auto;}
+.typecho-login{display:block;
+padding:15px 30px;
+margin:0 auto;}
+.typecho-login .more-link{margin-top:0px;}
+.typecho-login h1{margin: .5em 0 1em;}
+#cover{position:fixed;
+width:100%;
+background-repeat: no-repeat;
+background-size: cover;
+background-image:url('https://www.ruletree.club/bg.jpg');
+left:0;
+height:100%;
+z-index:-1;}
+@media all and (max-width: 1000px) {
+	#typecho-nav-list{display:none;}
+	.typecho-head-nav .operate,.main{width:100%;}
+	.typecho-head-nav .operate a:nth-child(3){margin-right:15px;}
+	.typecho-head-nav .operate{padding-right:0px;}
+}
+@media all and (max-width: 500px) {
+	.container{padding:0 20px;}
+	.typecho-page-main .col-tb-4{width:100%;}
+}
