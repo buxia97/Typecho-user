@@ -16,7 +16,11 @@ function getElementsClass(classnames){
 	return classobj;
 } 
 window.onload=function (){
-	var HtmlText="<div class=\"user-info\"><a href=\""+UserLink+"\"><img src=\""+UserPic+"\" /></a><p>欢迎您，<a href=\""+UserLink+"\">"+UserName+"</a></p></div><div class=\"user-nav\"><ul><li><a href=\""+SiteLink+"admin/index.php\"><i class=\"fa fa-dashboard\"></i>控制台</a></li><li><a href=\""+SiteLink+"admin/profile.php\"><i class=\"fa fa-gear\"></i>个人设置</a></li><li><a href=\""+SiteLink+"admin/write-post.php\"><i class=\"fa fa-pencil\"></i>创建文章</a></li><li><a href=\""+SiteLink+"admin/manage-posts.php\"><i class=\"fa fa-cube\"></i>管理文章</a></li><li><a href=\""+SiteLink+"admin/manage-comments.php\"><i class=\"fa fa-comments-o\"></i>管理评论</a></li></ul></div><div class=\"copy-links\"><p>版权链接</p><div class=\"links-mian\"><a href=\"\">typecho</a><a href=\"\">规则之树</a><a href=\"\">QQ群</a></div></div>";
+  	if(UserGroup != "subscriber"){
+		var HtmlText="<div class=\"user-info\"><a href=\""+UserLink+"\"><img src=\""+UserPic+"\" /></a><p>欢迎您，<a href=\""+UserLink+"\">"+UserName+"</a></p></div><div class=\"user-nav\"><ul><li><a href=\""+SiteLink+"admin/index.php\"><i class=\"fa fa-dashboard\"></i>控制台</a></li><li><a href=\""+SiteLink+"admin/profile.php\"><i class=\"fa fa-gear\"></i>个人设置</a></li><li><a href=\""+SiteLink+"admin/write-post.php\"><i class=\"fa fa-pencil\"></i>创建文章</a></li><li><a href=\""+SiteLink+"admin/manage-posts.php\"><i class=\"fa fa-cube\"></i>管理文章</a></li><li><a href=\""+SiteLink+"admin/manage-comments.php\"><i class=\"fa fa-comments-o\"></i>管理评论</a></li></ul></div><div class=\"copy-links\"><p>版权链接</p><div class=\"links-mian\"><a href=\"\">typecho</a><a href=\"\">规则之树</a><a href=\"\">QQ群</a></div></div>";
+    }else{
+    	var HtmlText="<div class=\"user-info\"><a href=\""+UserLink+"\"><img src=\""+UserPic+"\" /></a><p>欢迎您，<a href=\""+UserLink+"\">"+UserName+"</a></p></div><div class=\"user-nav\"><ul><li><a href=\""+SiteLink+"admin/index.php\"><i class=\"fa fa-dashboard\"></i>控制台</a></li><li><a href=\""+SiteLink+"admin/profile.php\"><i class=\"fa fa-gear\"></i>个人设置</a></li></ul></div><div class=\"copy-links\"><p>版权链接</p><div class=\"links-mian\"><a href=\"\">typecho</a><a href=\"\">规则之树</a><a href=\"\">QQ群</a></div></div>";
+    }
 	var Nav = document.getElementById('typecho-nav-list');
 	if(UserGroup != ""){
 		Nav.innerHTML = HtmlText;
