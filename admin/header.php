@@ -23,24 +23,24 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
         <title><?php _e('%s - %s - Powered by Typecho', $menu->title, $options->title); ?></title>
         <meta name="robots" content="noindex, nofollow">
         <?php echo $header; ?>
-		<?php if($user->group != "administrator"): ?>
-        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-        <link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.0">
-        <script>
-		var UserLink="<?php $options->adminUrl('profile.php'); ?>";
-		var UserPic="<?php echo Typecho_Common::gravatarUrl($user->mail, 100, 'X', 'mm', $request->isSecure()); ?>";
-		var SiteLink="<?php $options->siteUrl(); ?>";
-		var UserName="<?php $user->screenName(); ?>";
-        var UserGroup="<?php $user->group(); ?>";
-        var SiteName="<?php $options->title(); ?>";
-		</script>
-        <script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.0"></script>
-        <?php if($menu->title == "网站概要"): ?>
-        <style>
-			.typecho-page-main div:nth-child(4){display:none;}
-		</style>
-        <?php endif; ?>
-		<?php endif; ?>
+	<?php if($user->group != "administrator"): ?>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.0">
+	<script>
+	var UserLink="<?php $options->adminUrl('profile.php'); ?>";
+	var UserPic="<?php echo Typecho_Common::gravatarUrl($user->mail, 100, 'X', 'mm', $request->isSecure()); ?>";
+	var SiteLink="<?php $options->siteUrl(); ?>";
+	var UserName="<?php $user->screenName(); ?>";
+	var UserGroup="<?php $user->group(); ?>";
+	var SiteName="<?php $options->title(); ?>";
+	</script>
+	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.0"></script>
+	<?php if($menu->title == "网站概要"): ?>
+	<style>
+	.typecho-page-main div:nth-child(4){display:none;}
+	</style>
+	<?php endif; ?>
+	<?php endif; ?>
         
 		
     </head>
