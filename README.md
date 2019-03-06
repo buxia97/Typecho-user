@@ -11,7 +11,7 @@ typecho开源博客程序，实现多用户会员中心。
 
 #主要实现代码
 
-		<?php if($user->group != "administrator"): ?>
+	<?php if($user->group != "administrator"): ?>
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.0">
         <script>
@@ -28,6 +28,6 @@ typecho开源博客程序，实现多用户会员中心。
           .typecho-page-main div:nth-child(4){display:none;}
           </style>
         <?php endif; ?>
-		<?php endif; ?>
+	<?php endif; ?>
  
  
