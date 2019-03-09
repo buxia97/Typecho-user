@@ -1,10 +1,8 @@
 @charset "utf-8";
 /* typecho user V1.0 */
-/* 不暇 QQ1378283361 */
-/* www.ruletree.club */
 ::selection{background:#c51f1f;
 color:#fff;}
-::-moz-selection{background:#c51f1f;
+​​​​​​​::-moz-selection{background:#c51f1f;
 color:#fff;}
 a{transition: 0.5s all;
 -webkit-transition: 0.5s all;
@@ -40,7 +38,7 @@ margin-top:7px;}
 .typecho-page-title h2 a{background:#1c9fa0;
 color:#fff;}
 .typecho-head-nav .operate a:hover{background:#136263;}
-.main{width: calc(100% - 250px);
+.main{width:calc(100% - 250px);
 position:absolute;
 right:0;
 top:0px;
@@ -110,35 +108,28 @@ font-size:16px;}
 #start-link{padding: 0 0 20px;}
 .primary{background-color:#1c9fa0;}
 .primary:hover{background-color:#177d7d;}
-.typecho-login{background:#fff;
--webkit-box-shadow:0 1px 5px rgba(0,0,0,.2);
-box-shadow:0 1px 5px rgba(0,0,0,.2);
-opacity:0.95;}
-.typecho-login-wrap{width:100%;
-display:block;
-position:absolute;
-top:25%;
-height:auto;}
-.typecho-login{display:block;
-padding:15px 30px;
-margin:0 auto;}
-.typecho-login .more-link{margin-top:0px;}
-.typecho-login h1{margin: .5em 0 1em;}
-#cover{position:fixed;
-width:100%;
-background-repeat: no-repeat;
-background-size: cover;
-background-image:url('bg.jpg');
-left:0;
-height:100%;
-z-index:-1;}
+.popup{top:50px !important;
+width:calc(100% - 250px) !important;
+left:250px !important;}
+@media all and (min-width: 1000px) {
+	#typecho-nav-list{display:block !important;}
+	.popup{top:50px !important;
+	width:calc(100% - 250px) !important;
+	left:250px !important;}
+	.main{width: calc(100% - 250px) !important;}
+	.typecho-head-nav .operate{width: calc(100% - 265px) !important;;}
+}
 @media all and (max-width: 1000px) {
 	#typecho-nav-list{display:none;}
 	.typecho-head-nav .operate,.main{width:100%;}
+	.popup{width:100% !important;
+	left:0px !important}
 	.typecho-head-nav .operate a:nth-child(3){margin-right:15px;}
 	.typecho-head-nav .operate{padding-right:0px;}
 }
 @media all and (max-width: 500px) {
 	.container{padding:0 20px;}
 	.typecho-page-main .col-tb-4{width:100%;}
+	.popup{width:100% !important;
+	left:0px !important}
 }
