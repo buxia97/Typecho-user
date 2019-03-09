@@ -70,6 +70,6 @@ window.onload=function (){
       	var Cover=document.createElement('div');
       	Cover.id="cover";
         Body.appendChild(Cover);
-        LoginMain.innerHTML=SiteName;
+        LoginMain.innerHTML="<img src=\""+SiteLink+"user/logo.png\" alt=\""+SiteName+"\"/>";
     }
 }
