@@ -2,7 +2,7 @@
 /* typecho user V1.0 */
 ::selection{background:#c51f1f;
 color:#fff;}
-​​​​​​​::-moz-selection{background:#c51f1f;
+::-moz-selection{background:#c51f1f;
 color:#fff;}
 a{transition: 0.5s all;
 -webkit-transition: 0.5s all;
@@ -118,7 +118,7 @@ opacity:0.95;}
 .typecho-login-wrap{width:100%;
 display:block;
 position:absolute;
-top:25%;
+top:22%;
 height:auto;}
 .typecho-login{display:block;
 padding:15px 30px;
@@ -126,7 +126,8 @@ margin:0 auto;}
 .typecho-login .more-link{margin-top:0px;}
 .typecho-login h1{margin: .5em 0 1em;}
 .i-logo{background:none;
-display:contents;}
+display:inline;
+opacity:1;}
 .typecho-login h1{
 margin:.5em 0 0.5em;}
 #cover{position:fixed;
