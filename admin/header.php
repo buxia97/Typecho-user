@@ -33,13 +33,19 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
 	var UserName="<?php $user->screenName(); ?>";
 	var UserGroup="<?php $user->group(); ?>";
 	var SiteName="<?php $options->title(); ?>";
+	var MenuTitle="<?php $menu->title(); ?>";
 	</script>
 	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.0"></script>
-	<?php if($menu->title == "网站概要"): ?>
 	<style>
+	<?php if($menu->title == "网站概要"): ?>
 	.typecho-page-main div:nth-child(4){display:none;}
-	</style>
 	<?php endif; ?>
+	<?php if($menu->title == "登录到".$options->title): ?>
+	.popup{width:100% !important;
+	left:0px !important;
+	top:0px !important;}
+	<?php endif; ?>
+	</style>
 	<?php endif; ?>
         
 		
