@@ -14,27 +14,39 @@ typecho开源博客程序，实现多用户会员中心。
 1.备份原有的admin/header.php，将文件覆盖到根目录。
 2.访问域名/member.php进入会员中心入口。
 
+# 更新日志
+
+2019/03/11：新增了对QQ邮箱的识别并生成QQ头像，在会员中心全局调用
+2019/03/09：修复了提示框被遮挡和错位的问题，美化了登录页面，新定义了网站logo
+2019/03/06：原始版本
+
 # 主要实现代码
 
 下列代码主要在admin/header.php的head标签对中，如果因为typecho更新导致该文件有很大变化，或者发现上传覆盖后出现报错，可以手动复制下发代码添加。
 
 	<?php if($user->group != "administrator"): ?>
-        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-        <link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.0">
-        <script>
-          var UserLink="<?php $options->adminUrl('profile.php'); ?>";
-          var UserPic="<?php echo Typecho_Common::gravatarUrl($user->mail, 100, 'X', 'mm', $request->isSecure()); ?>";
-          var SiteLink="<?php $options->siteUrl(); ?>";
-          var UserName="<?php $user->screenName(); ?>";
-          var UserGroup="<?php $user->group(); ?>";
-          var SiteName="<?php $options->title(); ?>";
-        </script>
-        <script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.0"></script>
-        <?php if($menu->title == "网站概要"): ?>
-          <style>
-          .typecho-page-main div:nth-child(4){display:none;}
-          </style>
-        <?php endif; ?>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.02">
+	<script>
+	var UserLink="<?php $options->adminUrl('profile.php'); ?>";
+	var UserPic="<?php $email =$user->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&';}else{$email= md5($email);echo '//cdn.v2ex.com/gravatar/'.$email.'?';}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>";
+	var SiteLink="<?php $options->siteUrl(); ?>";
+	var UserName="<?php $user->screenName(); ?>";
+	var UserGroup="<?php $user->group(); ?>";
+	var SiteName="<?php $options->title(); ?>";
+	var MenuTitle="<?php $menu->title(); ?>";
+	</script>
+	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.02"></script>
+	<style>
+	<?php if($menu->title == "网站概要"): ?>
+	.typecho-page-main div:nth-child(4){display:none;}
+	<?php endif; ?>
+	<?php if($menu->title == "登录到".$options->title): ?>
+	.popup{width:100% !important;
+	left:0px !important;
+	top:0px !important;}
+	<?php endif; ?>
+	</style>
 	<?php endif; ?>
  
  
