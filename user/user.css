@@ -139,12 +139,9 @@ left:0;
 height:100%;
 z-index:-1;}
 @media all and (min-width: 1000px) {
-	#typecho-nav-list{display:block !important;}
 	.popup{top:50px !important;
 	width:calc(100% - 250px) !important;
 	left:250px !important;}
-	.main{width: calc(100% - 250px) !important;}
-	.typecho-head-nav .operate{width: calc(100% - 265px) !important;;}
 }
 @media all and (max-width: 1000px) {
 	#typecho-nav-list{display:none;}
