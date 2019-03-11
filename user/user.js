@@ -64,9 +64,11 @@ window.onload=function (){
                 }
             }
         }
-	var avatar=getElementsClass("profile-avatar")[0];
-	avatar.setAttribute("src",UserPic+"s=640");
-	avatar.style.width="220px";
+	if (MenuTitle == "个人设置"){
+		var avatar=getElementsClass("profile-avatar")[0];
+		avatar.setAttribute("src",UserPic+"s=640");
+		avatar.style.width="220px";
+	}
     }else{
         var LoginMain=getElementsClass("i-logo")[0];
       	var Body=getElementsClass("body-100")[0];
