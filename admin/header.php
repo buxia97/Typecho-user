@@ -37,7 +37,7 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
 	</script>
 	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.02"></script>
 	<style>
-	<?php if($menu->title == "网站概要"): ?>
+	<?php if(($menu->title == "网站概要")||($menu->title == "")): ?>
 	.typecho-page-main div:nth-child(4){display:none;}
 	<?php endif; ?>
 	<?php if($menu->title == "登录到".$options->title): ?>
