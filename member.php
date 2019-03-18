@@ -17,6 +17,9 @@
         </style>
     </head>
     <body>
-  		<iframe id="contentPage" src="admin" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" frameborder="0"></iframe>
+  		<!--<iframe id="contentPage" src="admin" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" frameborder="0"></iframe>-->
+	    <script type="text/javascript">
+		window.location.href="admin";
+		</script>
 	</body>
 </html>
