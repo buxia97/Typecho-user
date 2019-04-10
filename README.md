@@ -1,8 +1,8 @@
 # Typecho会员中心
 
 typecho开源博客程序，实现多用户会员中心。
-不修改任何typecho重要文件，1.0+版本都可以使用，全响应式界面，原生js支持，代码仅仅十多KB，可以帮助博客网站快速的实现会员中心界面。
-更多typecho教程，反馈意见及问题，可以访问我的博客：www.ruletree.club
+不修改任何typecho重要文件，1.0+版本都可以使用，全响应式界面，原生js支持，代码仅仅十多KB，可以帮助博客网站快速的实现会员中心界面。**目前已经添加了对后台界面的支持，只需要简单的修改页面判断即可**。
+更多typecho教程，反馈意见及问题，可以访问我的博客：[www.ruletree.club](https://www.ruletree.club "规则之树") 
 
 # 功能介绍
 
@@ -23,30 +23,38 @@ typecho开源博客程序，实现多用户会员中心。
 # 主要实现代码
 
 下列代码主要在admin/header.php的head标签对中，如果因为typecho更新导致该文件有很大变化，或者发现上传覆盖后出现报错，可以手动复制下发代码添加。
+``` php
+<?php if($user->group != "administrator"): ?>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.10">
+<script>
+var UserLink="<?php $options->adminUrl('profile.php'); ?>";
+var UserPic="<?php $email =$user->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&';}else{$email= md5($email);echo '//cdn.v2ex.com/gravatar/'.$email.'?';}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>";
+var SiteLink="<?php $options->siteUrl(); ?>";
+var UserName="<?php $user->screenName(); ?>";
+var UserGroup="<?php $user->group(); ?>";
+var SiteName="<?php $options->title(); ?>";
+var MenuTitle="<?php $menu->title(); ?>";
+</script>
+<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.10"></script>
+<style>
+<?php if($menu->title == "网站概要"): ?>
+.typecho-page-main div:nth-child(4){display:none;}
+<?php endif; ?>
+<?php if($menu->title == "登录到".$options->title): ?>
+.popup{width:100% !important;
+left:0px !important;
+top:0px !important;}
+<?php endif; ?>
+</style>
+<?php endif; ?>
+```
+	
+下方的判断相当于是否开启后台模板，如果去掉如下代码，将会让界面风格在后台生效（目前还处于测试界面，需要更多反馈意见）
+``` php
+<?php if($user->group != "administrator"): ?>
+<?php endif; ?>
+```
 
-	<?php if($user->group != "administrator"): ?>
-	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.02">
-	<script>
-	var UserLink="<?php $options->adminUrl('profile.php'); ?>";
-	var UserPic="<?php $email =$user->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&';}else{$email= md5($email);echo '//cdn.v2ex.com/gravatar/'.$email.'?';}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>";
-	var SiteLink="<?php $options->siteUrl(); ?>";
-	var UserName="<?php $user->screenName(); ?>";
-	var UserGroup="<?php $user->group(); ?>";
-	var SiteName="<?php $options->title(); ?>";
-	var MenuTitle="<?php $menu->title(); ?>";
-	</script>
-	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.02"></script>
-	<style>
-	<?php if($menu->title == "网站概要"): ?>
-	.typecho-page-main div:nth-child(4){display:none;}
-	<?php endif; ?>
-	<?php if($menu->title == "登录到".$options->title): ?>
-	.popup{width:100% !important;
-	left:0px !important;
-	top:0px !important;}
-	<?php endif; ?>
-	</style>
-	<?php endif; ?>
  
  
