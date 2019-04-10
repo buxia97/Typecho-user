@@ -25,7 +25,7 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
         <?php echo $header; ?>
 	<?php if($user->group != "administrator"): ?>
 	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.02">
+	<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.10">
 	<script>
 	var UserLink="<?php $options->adminUrl('profile.php'); ?>";
 	var UserPic="<?php $email =$user->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&';}else{$email= md5($email);echo '//cdn.v2ex.com/gravatar/'.$email.'?';}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>";
@@ -35,7 +35,7 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
 	var SiteName="<?php $options->title(); ?>";
 	var MenuTitle="<?php $menu->title(); ?>";
 	</script>
-	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.02"></script>
+	<script src="<?php $options->siteUrl(); ?>/user/user.js?v=1.10"></script>
 	<style>
 	<?php if(($menu->title == "网站概要")||($menu->title == "")): ?>
 	.typecho-page-main div:nth-child(4){display:none;}
