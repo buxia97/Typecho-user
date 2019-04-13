@@ -80,7 +80,7 @@ width:90px;
 display:block;
 width:90%;
 margin:0 auto;
-height:40px;
+height:auto;
 zoom:1;
 overflow:hidden;
 font-size:15px;
@@ -99,14 +99,14 @@ text-indent:1.6em;}
 margin-top:12px;
 font-size:15px;
 margin-right:10px;}
-.user-nav li ul{display:block;
+.user-nav li ul{display:none;
 width:100%;
 height:auto;
 zoom:1;
 overflow:hidden;
 background:#191919;
 padding:10px 0px !important;}
-.user-nav li:hover{height:auto;}
+/* .user-nav li:hover{height:auto;} */
 .user-nav li ul li{height:35px;
 line-height:35px;
 margin-top:0px;}
