@@ -25,6 +25,7 @@ $(function(){
 		var HtmlText="<div class=\"user-nav\"><ul><li><a href=\""+SiteLink+"admin/index.php\"><i class=\"fa fa-dashboard\"></i>控制台</a></li><li><a href=\""+SiteLink+"admin/profile.php\"><i class=\"fa fa-gear\"></i>个人设置</a></li></ul></div>";
     }
 	var NavHtml = UserInfo+HtmlText;
+	var Nav = document.getElementById('typecho-nav-list');
 	if(UserGroup != ""){
 		$('#typecho-nav-list').html(NavHtml);
       	var ToMain=getElementsClass("operate")[0];
