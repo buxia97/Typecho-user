@@ -38,6 +38,7 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
 		<style>
 		<?php if(($menu->title == "网站概要")||($menu->title == "")): ?>
 		.typecho-page-main div:nth-child(4){display:none;}
+		.typecho-page-main .col-tb-4{width:50%;}
 		<?php endif; ?>
 		<?php if($menu->title == "登录到".$options->title): ?>
 		.popup{width:100% !important;
