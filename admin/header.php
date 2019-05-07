@@ -29,7 +29,7 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
 		<script>
 		var UserLink="<?php $options->adminUrl('profile.php'); ?>";
 		var UserPic="<?php $email =$user->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&';}else{$email= md5($email);echo '//cdn.v2ex.com/gravatar/'.$email.'?';}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>";
-		var SiteLink="<?php $options->siteUrl(); ?>";
+		var SiteLink="<?php $options->adminUrl(); ?>";
 		var UserName="<?php $user->screenName(); ?>";
 		var UserGroup="<?php $user->group(); ?>";
 		var SiteName="<?php $options->title(); ?>";
