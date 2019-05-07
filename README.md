@@ -2,8 +2,7 @@
 
 typecho开源博客程序，实现多用户会员中心。
 不修改任何typecho重要文件，1.0+版本都可以使用，全响应式界面，原生js支持，代码仅仅十多KB，可以帮助博客网站快速的实现会员中心界面。**目前已经添加了对后台界面的支持，只需要简单的修改页面判断即可**。
-更多typecho教程，反馈意见及问题，可以访问我的博客：[www.ruletree.club](https://www.ruletree.club "规则之树") 
-下载最新稳定版本[点击此处](https://github.com/buxia97/Typecho-user/releases/download/v1.10/TypechoUser-release.tar.gz "TypechoUser-release.tar.gz") 
+更多typecho教程，反馈意见及问题，可以访问我的博客：[www.ruletree.club](https://www.ruletree.club "规则之树")，下载最新稳定版本[点击此处](https://github.com/buxia97/Typecho-user/releases/download/v1.10/TypechoUser-release.tar.gz "TypechoUser-release.tar.gz") 
 
 # 功能介绍
 
