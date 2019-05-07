@@ -176,6 +176,7 @@ z-index:-1;}
 .typecho-table-wrap{padding:0px;}
 .wmd-button-row{height:auto;}
 .row [class*="col-"]{padding:0px 5px;}
+.i-logo img{max-width:170px;}
 #custom-field textarea{width:100%;
 min-height:100px;}
 @media all and (min-width: 1000px) {
@@ -184,6 +185,7 @@ min-height:100px;}
 	left:250px !important;}
 }
 @media all and (max-width: 1000px) {
+	.user-info{margin-top:50px;}
 	#typecho-nav-list{display:none;}
 	.typecho-head-nav .operate,.main{width:100%;}
 	.popup{width:100% !important;
@@ -193,7 +195,7 @@ min-height:100px;}
 }
 @media all and (max-width: 500px) {
 	
-	.typecho-page-main .col-tb-4{width:100%;}
+	.typecho-page-main .col-tb-4{width:100% !important;}
 	.popup{width:100% !important;
 	left:0px !important}
 	#btn-preview{display:none;}
