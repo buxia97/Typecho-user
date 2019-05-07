@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* typecho user V2.00 */
+/* 风格切换CSS文件 */
+a{color:#467B96;}
+#typecho-nav-list{background:#fff;}
+.typecho-head-nav a {color:#333;}
+.user-info{color:#999;}
+.typecho-head-nav a:hover, .typecho-head-nav a:focus{color:#333}
+#tonav a:focus,#tonav a:hover{color:#fff}
+.typecho-head-nav .operate{background:#6777ef}
+.user-info{background:url(/user/nav-bg1.jpg);
+background-repeat:no-repeat;
+background-size:100%;
+height:150px;
+border:none;
+color:#fff;}
+.user-info a{color:#fff;}
+.primary{background-color:#6777ef;}
+.user-nav li ul{background:#f3f2f2;}
+.user-nav li a:hover{color:#6777ef;}
+.user-nav li ul li a:hover{background:#6777ef}
+.typecho-head-nav .operate a:hover{background: #5562c1;}
+.primary:hover{background: #5562c1;}
