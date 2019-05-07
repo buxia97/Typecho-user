@@ -3,6 +3,7 @@
 typecho开源博客程序，实现多用户会员中心。
 不修改任何typecho重要文件，1.0+版本都可以使用，全响应式界面，原生js支持，代码仅仅十多KB，可以帮助博客网站快速的实现会员中心界面。**目前已经添加了对后台界面的支持，只需要简单的修改页面判断即可**。
 更多typecho教程，反馈意见及问题，可以访问我的博客：[www.ruletree.club](https://www.ruletree.club "规则之树") 
+下载最新稳定版本[点击此处](https://github.com/buxia97/Typecho-user/releases/download/v1.10/TypechoUser-release.tar.gz "TypechoUser-release.tar.gz") 
 
 # 功能介绍
 
@@ -16,6 +17,7 @@ typecho开源博客程序，实现多用户会员中心。
 
 # 更新日志
 
+	2019/05/07：后台风格完美实现，发布稳定版本
 	2019/04/10：对后台风格提供了支持，进入测试阶段
 	2019/03/11：新增了对QQ邮箱的识别并生成QQ头像，在会员中心全局调用
 	2019/03/09：修复了提示框被遮挡和错位的问题，美化了登录页面，新定义了网站logo
@@ -31,6 +33,7 @@ typecho开源博客程序，实现多用户会员中心。
 <script>
 var UserLink="<?php $options->adminUrl('profile.php'); ?>";
 var UserPic="<?php $email =$user->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&';}else{$email= md5($email);echo '//cdn.v2ex.com/gravatar/'.$email.'?';}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>";
+var AdminLink="<?php $options->adminUrl(); ?>";
 var SiteLink="<?php $options->adminUrl(); ?>";
 var UserName="<?php $user->screenName(); ?>";
 var UserGroup="<?php $user->group(); ?>";
