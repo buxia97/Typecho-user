@@ -23,7 +23,6 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
         <title><?php _e('%s - %s - Powered by Typecho', $menu->title, $options->title); ?></title>
         <meta name="robots" content="noindex, nofollow">
 		<?php echo $header; ?>
-		<?php if($user->group != "administrator"): ?>
 		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user.css?v=1.02">
 	    	<link rel="stylesheet" href="<?php $options->siteUrl(); ?>/user/user-style.css?v=1.02">
@@ -46,7 +45,6 @@ $header = Typecho_Plugin::factory('admin/header.php')->header($header);
 		.popup{width:100% !important;
 		left:0px !important;
 		top:0px !important;}
-		<?php endif; ?>
 		<?php endif; ?>
 		</style>
     </head>
